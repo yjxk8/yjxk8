@@ -1,6 +1,7 @@
 package com.zhfw.event.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhfw.event.dao.ProGroupMapper;
 import com.zhfw.event.pojo.ProGroup;
 import com.zhfw.event.service.ProGroupService;
@@ -75,34 +76,33 @@ public class ProGroupImpl implements ProGroupService {
     public List<ProGroup> findList(Map<String, Object> searchMap){
         return proGroupMapper.selectList(createQuery(searchMap));
     }
-//
-//    /**
-//     * 分页查询
-//     * @param page
-//     * @param size
-//     * @return
-//     */
-//    @Override
-//    public Page<ProGroup> findPage(int page, int size){
-//        Page<ProGroup> page1=new Page<ProGroup>(page,size);
-//
-//        return (Page<ProGroup>)proGroupMapper.selectAll();
-//    }
-//
-//    /**
-//     * 条件+分页查询
-//     * @param searchMap 查询条件
-//     * @param page 页码
-//     * @param size 页大小
-//     * @return 分页结果
-//     */
-//    @Override
-//    public Page<ProGroup> findPage(Map<String,Object> searchMap, int page, int size){
-//        PageHelper.startPage(page,size);
-//        Example example = createExample(searchMap);
-//        return (Page<ProGroup>)proGroupMapper.selectByExample(example);
-//    }
-//
+
+    /**
+     * 分页查询
+     * @param page
+     * @param size
+     * @return
+     */
+    @Override
+    public Page<ProGroup> findPage(int page, int size){
+        Page<ProGroup> page1=new Page(page,size);
+        return proGroupMapper.selectPage(page1,null);
+    }
+
+    /**
+     * 条件+分页查询
+     * @param searchMap 查询条件
+     * @param page 页码
+     * @param size 页大小
+     * @return 分页结果
+     */
+    @Override
+    public Page<ProGroup> findPage(Map<String,Object> searchMap, int page, int size){
+        Page<ProGroup> page1=new Page(page,size);
+        QueryWrapper example = createQuery(searchMap);
+        return proGroupMapper.selectPage(page1,example);
+    }
+
 //    @Override
 //    public List<Map> findProGroupListByCategoryName(String categoryName) {
 //        List<Map> proGroupList = proGroupMapper.findBrandListByCategoryName(categoryName);
@@ -118,9 +118,13 @@ public class ProGroupImpl implements ProGroupService {
         QueryWrapper<ProGroup> qw = new QueryWrapper<>();
          if(searchMap!=null){
             // 品牌名称
-            if(searchMap.get("typeName")!=null && !"".equals(searchMap.get("typeName"))){
-                qw.like("typeName","%"+searchMap.get("typeName")+"%");
+            if(searchMap.get("type_name")!=null && !"".equals(searchMap.get("type_name"))){
+                qw.like("type_name","%"+searchMap.get("type_name")+"%");
             }
+             // 品牌名称
+             if(searchMap.get("standard_code")!=null && !"".equals(searchMap.get("standard_code"))){
+                 qw.like("standard_code","%"+searchMap.get("standard_code")+"%");
+             }
 
             // 品牌id
             if(searchMap.get("id")!=null ){

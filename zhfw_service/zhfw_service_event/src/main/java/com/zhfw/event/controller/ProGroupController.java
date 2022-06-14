@@ -1,10 +1,10 @@
 package com.zhfw.event.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.zhfw.entity.PageResult;
 import com.zhfw.entity.Result;
 import com.zhfw.entity.StatusCode;
 import com.zhfw.event.pojo.ProGroup;
-import com.zhfw.event.pojo.ProGroup;
-import com.zhfw.event.service.ProGroupService;
 import com.zhfw.event.service.ProGroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -92,20 +92,20 @@ public class ProGroupController {
     }
 
 
-//    /***
-//     * 分页搜索实现
-//     * @param searchMap
-//     * @param page
-//     * @param size
-//     * @return
-//     */
-//    @GetMapping(value = "/search/{page}/{size}" )
-//    public Result findPage(@RequestParam Map searchMap, @PathVariable  int page, @PathVariable  int size){
-//        Page<ProGroup> pageList = proGroupService.findPage(searchMap, page, size);
-//        PageResult pageResult=new PageResult(pageList.getTotal(),pageList.getRecords());
-//        return new Result(true,StatusCode.OK,"查询成功",pageResult);
-//    }
-//
+    /***
+     * 分页搜索实现
+     * @param searchMap
+     * @param page
+     * @param size
+     * @return
+     */
+    @GetMapping(value = "/search/{page}/{size}" )
+    public Result findPage(@RequestParam Map searchMap, @PathVariable  int page, @PathVariable  int size){
+        Page<ProGroup> pageList = proGroupService.findPage(searchMap, page, size);
+        PageResult pageResult=new PageResult(pageList.getTotal(),pageList.getRecords());
+        return new Result(true,StatusCode.OK,"查询成功",pageResult);
+    }
+
 //    @GetMapping("/category/{categoryName}")
 //    public Result<List<Map>> findProGroupListByCategoryName(@PathVariable("categoryName")String categoryName){
 //        List<Map> proGroupList = proGroupService.findProGroupListByCategoryName(categoryName);

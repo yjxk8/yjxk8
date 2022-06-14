@@ -1,5 +1,6 @@
 package com.zhfw.event.service;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhfw.event.pojo.ProGroup;
 
 import javax.rmi.PortableRemoteObject;
@@ -47,23 +48,23 @@ public interface ProGroupService {
      */
     List<ProGroup> findList(Map<String, Object> searchMap);
 
-//    /***
-//     * 分页查询
-//     * @param page
-//     * @param size
-//     * @return
-//     */
-//    Page<ProGroup> findPage(int page, int size);
-//
-//    /***
-//     * 多条件分页查询
-//     * @param searchMap
-//     * @param page
-//     * @param size
-//     * @return
-//     */
-//    Page<ProGroup> findPage(Map<String, Object> searchMap, int page, int size);
-//
+    /***
+     * 分页查询
+     * @param page
+     * @param size
+     * @return
+     */
+    Page<ProGroup> findPage(int page, int size);
+
+    /***
+     * 多条件分页查询
+     * @param searchMap
+     * @param page
+     * @param size
+     * @return
+     */
+    Page<ProGroup> findPage(Map<String, Object> searchMap, int page, int size);
+
 //    /**
 //     * 根据分类名称查询品牌列表
 //     * @param categoryName

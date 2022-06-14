@@ -1,6 +1,0 @@
-com/zhfw/system/filter/UrlFilter.class
-com/zhfw/system/util/JwtUtil.class
-com/zhfw/system/GateWayApplication$1.class
-com/zhfw/system/GateWayApplication.class
-com/zhfw/system/filter/IpFilter.class
-com/zhfw/system/filter/AuthorizeFilter.class

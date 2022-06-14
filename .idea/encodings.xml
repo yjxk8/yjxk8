@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/zhfw_canal/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_common_db/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_gateway/zhfw_geteway_system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_service/zhfw_service_event/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_service/zhfw_service_event/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhfw_service_api/zhfw_service_event_api/src/main/java" charset="UTF-8" />
+  </component>
+</project>

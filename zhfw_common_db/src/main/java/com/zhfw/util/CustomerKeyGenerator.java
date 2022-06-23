@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Random;
 
 @Component
+
 public class CustomerKeyGenerator implements IKeyGenerator {
 
     /**

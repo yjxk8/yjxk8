@@ -3,7 +3,6 @@ package com.zhfw.event.service;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.zhfw.event.pojo.ProGroup;
 
-import javax.rmi.PortableRemoteObject;
 import java.util.List;
 import java.util.Map;
 

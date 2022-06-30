@@ -2,37 +2,37 @@ package com.zhfw.system.service;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zhfw.system.pojo.Admin;
+import com.zhfw.system.pojo.UumUser;
 
 import java.util.List;
 import java.util.Map;
 
-public interface AdminService {
+public interface UumUserService {
 
     /***
      * 查询所有
      * @return
      */
-    List<Admin> findAll();
+    List<UumUser> findAll();
 
     /**
      * 根据ID查询
      * @param id
      * @return
      */
-    Admin findById(Integer id);
+    UumUser findById(Integer id);
 
     /***
      * 新增
-     * @param admin
+     * @param uumUser
      */
-    void add(Admin admin);
+    void add(UumUser uumUser);
 
     /***
      * 修改
-     * @param admin
+     * @param uumUser
      */
-    void update(Admin admin);
+    void update(UumUser uumUser);
 
     /***
      * 删除
@@ -45,7 +45,7 @@ public interface AdminService {
      * @param searchMap
      * @return
      */
-    List<Admin> findList(Map<String, Object> searchMap);
+    List<UumUser> findList(Map<String, Object> searchMap);
 
     /***
      * 分页查询
@@ -53,7 +53,7 @@ public interface AdminService {
      * @param size
      * @return
      */
-    Page<Admin> findPage(int page, int size);
+    Page<UumUser> findPage(int page, int size);
 
     /***
      * 多条件分页查询
@@ -62,12 +62,12 @@ public interface AdminService {
      * @param size
      * @return
      */
-    Page<Admin> findPage(Map<String, Object> searchMap, int page, int size);
+    Page<UumUser> findPage(Map<String, Object> searchMap, int page, int size);
 
     /**
      * 用户登录
      */
-    boolean login(Admin admin);
+    boolean login(UumUser uumUser);
 
 
 }

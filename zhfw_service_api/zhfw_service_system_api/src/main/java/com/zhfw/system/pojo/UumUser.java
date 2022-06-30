@@ -1,4 +1,4 @@
-package com.zhfw.event.pojo;
+package com.zhfw.system.pojo;
 
 
 import com.baomidou.mybatisplus.annotation.IdType;
@@ -19,6 +19,15 @@ public class UumUser implements Serializable {
   private Integer id;
   private String userName;
   private String userPassword;
+
+  private String status;
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
 
   public Integer getId() {

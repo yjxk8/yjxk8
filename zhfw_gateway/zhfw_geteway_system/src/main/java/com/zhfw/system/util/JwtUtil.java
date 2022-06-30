@@ -55,7 +55,7 @@ public class JwtUtil {
         SecretKey key = new SecretKeySpec(encodedKey, 0, encodedKey.length, "AES");
         return key;
     }
-    
+
     /**
      * 解析
      *

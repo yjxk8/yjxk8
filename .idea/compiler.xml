@@ -7,16 +7,19 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="zhfw_service_event" />
+        <module name="zhfw_service_system_api" />
         <module name="zhfw_service_event_api" />
         <module name="zhfw_common_db" />
         <module name="zhfw_common" />
         <module name="zhfw_eureka" />
         <module name="zhfw_web" />
+        <module name="zhfw_service_system" />
         <module name="zhfw_canal" />
         <module name="zhfw_geteway_system" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="changgou_service_system_api" target="1.5" />
       <module name="zhfw_service_business" target="1.8" />
       <module name="zhfw_service_business_api" target="1.8" />
       <module name="zhfw_service_config" target="1.8" />
@@ -26,8 +29,6 @@
       <module name="zhfw_service_goods_api" target="1.8" />
       <module name="zhfw_service_order" target="1.8" />
       <module name="zhfw_service_order_api" target="1.5" />
-      <module name="zhfw_service_system" target="1.8" />
-      <module name="zhfw_service_system_api" target="1.8" />
       <module name="zhfw_service_user" target="1.8" />
       <module name="zhfw_service_user_api" target="1.5" />
     </bytecodeTargetLevel>

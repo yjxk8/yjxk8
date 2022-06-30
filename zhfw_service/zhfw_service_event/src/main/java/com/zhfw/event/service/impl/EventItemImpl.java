@@ -86,7 +86,7 @@ public class EventItemImpl implements EventItemService {
 //    public Page<EventItem> findPage(int page, int size){
 //        Page<EventItem> page1=new Page<EventItem>(page,size);
 //
-//        return (Page<EventItem>)eventItemMapper.selectAll();
+//        return (Page<EventItem>)eventItemMapper.selectList(null);
 //    }
 //
 //    /**

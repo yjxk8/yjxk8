@@ -99,8 +99,8 @@ public class ProGroupImpl implements ProGroupService {
     @Override
     public Page<ProGroup> findPage(Map<String,Object> searchMap, int page, int size){
         Page<ProGroup> page1=new Page(page,size);
-        QueryWrapper example = createQuery(searchMap);
-        return proGroupMapper.selectPage(page1,example);
+        QueryWrapper qw = createQuery(searchMap);
+        return proGroupMapper.selectPage(page1,qw);
     }
 
 //    @Override
@@ -119,13 +119,12 @@ public class ProGroupImpl implements ProGroupService {
          if(searchMap!=null){
             // 品牌名称
             if(searchMap.get("type_name")!=null && !"".equals(searchMap.get("type_name"))){
-                qw.like("type_name","%"+searchMap.get("type_name")+"%");
+                qw.like("type_name",searchMap.get("type_name"));
             }
              // 品牌名称
              if(searchMap.get("standard_code")!=null && !"".equals(searchMap.get("standard_code"))){
-                 qw.like("standard_code","%"+searchMap.get("standard_code")+"%");
+                 qw.like("standard_code",searchMap.get("standard_code"));
              }
-
             // 品牌id
             if(searchMap.get("id")!=null ){
                 qw.eq("id",searchMap.get("id"));

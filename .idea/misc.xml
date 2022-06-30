@@ -10,6 +10,8 @@
         <option value="$PROJECT_DIR$/zhfw_service/pom.xml" />
         <option value="$PROJECT_DIR$/zhfw_gateway/pom.xml" />
         <option value="$PROJECT_DIR$/zhfw_canal/pom.xml" />
+        <option value="$PROJECT_DIR$/zhfw_service/zhfw_service_system/pom.xml" />
+        <option value="$PROJECT_DIR$/zhfw_service_api/zhfw_service_system_api/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

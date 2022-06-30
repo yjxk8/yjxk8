@@ -13,18 +13,9 @@ import org.springframework.context.annotation.Bean;
 @MapperScan(basePackages = {"com.zhfw.event.dao"})
 public class EventApplication {
 
-    @Value("${workerId}")
-    private Integer workerId;
-
-    @Value("${datacenterId}")
-    private Integer datacenterId;
 
     public static void main(String[] args) {
-        SpringApplication.run( EventApplication.class);
+        SpringApplication.run(EventApplication.class);
     }
 
-    @Bean
-    public IdWorker idWorker(){
-        return new IdWorker(workerId,datacenterId);
-    }
 }
